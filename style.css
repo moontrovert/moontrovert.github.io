@@ -1,0 +1,232 @@
+html { 
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.2) transparent;
+}
+html::-webkit-scrollbar {
+    width: 8px;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.nav-text.active {
+    font-size: 20px;
+    color: #45556c;
+    letter-spacing: 0.4em;
+    margin-left: 1em;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden ;
+    /* background: linear-gradient(to bottom #290E55 80%, #ffffff 20%); */
+    background: #2a0f55;
+} 
+
+header{
+    position: absolute;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul
+{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+    background: #fff;
+    color: #2b1055;
+}
+
+/* header .logo {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+} */
+
+
+design {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+design::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#2b1055, transparent);
+    z-index: 1000;
+
+}
+design img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+
+}
+
+design img#moon
+{
+    mix-blend-mode: screen;
+}
+
+design img#mountain_front
+{
+    z-index: 10;
+}
+
+#text
+{
+    position: absolute;
+    right: -400;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    white-space: nowrap;
+    font-size: 6.5vw;
+    z-index: 10;
+    margin-bottom: 2em;
+    margin-left: 0.7em;
+}
+
+#btn {
+    font-family: "Orbitron", sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 35px;
+    border-radius: 40px;
+    background: #2b1055;
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #fdfdfd;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 15px #fdfdfd;
+    transform: translateY(100px); /* Keeps the translate effect */
+}
+
+/* Glowing effect */
+#btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 10%);
+    transition: 0.3s ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Hover effect */
+#btn:hover {
+    color: #2b1055;
+    background: #fdfdfd;
+    box-shadow: 0 0 30px #fdfdfd;
+    transform: translateY(100px); /* Keeps it in place */
+}
+
+.sec
+{
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+
+}
+
+.sec h2
+{
+    font-size: 3.5;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.sec p
+{
+    font-size: 1em;
+    color: #fff;
+}
+
+#stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.pixel-text {
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 4px 4px 0px #000; /* Creates the pixelated effect */
+    letter-spacing: 2px;
+}
+
+main h2 {
+    font-family: "Press Start 2P", sans-serif; /* Or any other font you like */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
