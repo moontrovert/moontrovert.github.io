@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Recommendations Heatmap by Genre</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto Condensed', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+      margin: 0;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #2c3e50;
+    }
+    .chart-container {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid #eee;
+      max-width: 1200px;
+      width: 100%;
+      margin: 20px 0;
+    }
+    h3 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+    .subtitle {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 30px;
+      opacity: 0.8;
+    }
+    .axis text {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .heatmap-label {
+      font-size: 16px;
+      text-anchor: middle;
+      font-weight: 600;
+    }
+    .heat-cell rect {
+      rx: 4px;
+      ry: 4px;
+      transition: all 0.2s ease;
+      stroke: white;
+      stroke-width: 1.5px;
+    }
+    .heat-cell rect:hover {
+      stroke-width: 2.5px;
+      stroke: #333;
+      filter: brightness(1.05);
+    }
+    .tooltip {
+      position: absolute;
+      text-align: center;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 14px;
+      border-radius: 8px;
+      pointer-events: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .tooltip:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -8px;
+      border-width: 8px;
+      border-style: solid;
+      border-color: #2c3e50 transparent transparent;
+    }
+    .footer {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 15px;
+      opacity: 0.6;
+    }
+    .analysis-section {
+            max-width: 1364px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .analysis-section h2 {
+            color: #e50914;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .analysis-section p {
+            line-height: 1.6;
+            color: #333;
+        }
+  </style>
+</head>
+<body>
+  
+  <div class="analysis-section">
+    <h2> Audio Recommendations Heatmap: Single vs Multi-Audio by Genre</h2>
+    <p>
+      The heatmap reveals significant differences in audio recommendation patterns across genres. Dramas and Comedies 
+      receive the highest number of recommendations overall, with a notable preference for single-audio versions. 
+      Children & Family shows demonstrate a more balanced distribution between single and multi-audio recommendations, 
+      likely reflecting international accessibility needs for younger audiences. Action & Adventure titles show a 
+      surprising lean toward multi-audio options, possibly due to their global appeal. The visualization also highlights 
+      how niche genres like Horror and Romance tend to have fewer multi-audio recommendations, suggesting more 
+      localized production or audience targeting. The color gradient effectively shows the concentration of 
+      recommendations, with darker cells indicating genres that dominate Netflix's recommendation algorithm.
+    </p>
+
+
+<div class="chart-container">
+  <svg width="100%" height="100%" viewBox="0 0 1100 800" preserveAspectRatio="xMidYMid meet"></svg>
+</div>
+
+<script>
+  // Set up dimensions with responsive margins
+  const margin = {top: 80, right: 150, bottom: 80, left: 180},
+        width = 1100 - margin.left - margin.right,
+        height = 800 - margin.top - margin.bottom;
+
+  const svg = d3.select("svg")
+      .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  // Create tooltip
+  const tooltip = d3.select("body")
+      .append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0);
+
+  // Load your actual dataset
+  d3.csv("../datasets/genre_audio_recommendations.csv").then(data => {
+    // Process data as you specified
+    data.forEach(d => {
+      d["Single Audio Recs"] = +d["Single Audio Recs"];
+      d["Multi Audio Recs"] = +d["Multi Audio Recs"];
+    });
+
+    // Sort by total recommendations for better organization
+    data.sort((a, b) => 
+      (b["Single Audio Recs"] + b["Multi Audio Recs"]) - 
+      (a["Single Audio Recs"] + a["Multi Audio Recs"])
+    );
+
+    // Create scales with adjusted padding for more space
+    const y = d3.scaleBand()
+      .domain(data.map(d => d["Main Genre"]))
+      .range([0, height])
+      .padding(0.2);
+
+    const x = d3.scaleBand()
+      .domain(["Single Audio", "Multi Audio"])
+      .range([0, width])
+      .padding(0.15);
+
+    // Original blue color scheme
+    const maxValue = d3.max(data, d => Math.max(d["Single Audio Recs"], d["Multi Audio Recs"]));
+    const colorScale = d3.scaleSequential(d3.interpolateBlues)
+      .domain([0, maxValue]);
+
+    // Create heatmap cells with animations
+    const cells = svg.selectAll(".heat-cell")
+      .data(data)
+      .enter()
+      .append("g")
+      .attr("class", "heat-cell");
+
+    // Single Audio cells
+    cells.append("rect")
+      .attr("x", x("Single Audio"))
+      .attr("y", d => y(d["Main Genre"]))
+      .attr("width", x.bandwidth())
+      .attr("height", 0)
+      .attr("fill", d => colorScale(d["Single Audio Recs"]))
+      .on("mouseover", function(event, d) {
+        tooltip.style("opacity", 1)
+          .html(`<strong>${d["Main Genre"]}</strong><br>Single Audio: ${d["Single Audio Recs"]}`)
+          .style("left", (event.pageX + 15) + "px")
+          .style("top", (event.pageY - 30) + "px");
+        d3.select(this).attr("stroke-width", 2.5);
+      })
+      .on("mouseout", function() {
+        tooltip.style("opacity", 0);
+        d3.select(this).attr("stroke-width", 1.5);
+      })
+      .transition()
+      .duration(800)
+      .attr("height", y.bandwidth());
+
+    // Multi Audio cells
+    cells.append("rect")
+      .attr("x", x("Multi Audio"))
+      .attr("y", d => y(d["Main Genre"]))
+      .attr("width", x.bandwidth())
+      .attr("height", 0)
+      .attr("fill", d => colorScale(d["Multi Audio Recs"]))
+      .on("mouseover", function(event, d) {
+        tooltip.style("opacity", 1)
+          .html(`<strong>${d["Main Genre"]}</strong><br>Multi Audio: ${d["Multi Audio Recs"]}`)
+          .style("left", (event.pageX + 15) + "px")
+          .style("top", (event.pageY - 30) + "px");
+        d3.select(this).attr("stroke-width", 2.5);
+      })
+      .on("mouseout", function() {
+        tooltip.style("opacity", 0);
+        d3.select(this).attr("stroke-width", 1.5);
+      })
+      .transition()
+      .duration(800)
+      .delay(200)
+      .attr("height", y.bandwidth());
+
+    // Add value labels
+    cells.append("text")
+      .attr("x", d => x("Single Audio") + x.bandwidth()/2)
+      .attr("y", d => y(d["Main Genre"]) + y.bandwidth()/2)
+      .attr("dy", "0.35em")
+      .attr("text-anchor", "middle")
+      .style("fill", d => d["Single Audio Recs"] > maxValue/2 ? "white" : "#2c3e50")
+      .style("font-size", "12px")
+      .style("pointer-events", "none")
+      .text(d => d["Single Audio Recs"]);
+
+    cells.append("text")
+      .attr("x", d => x("Multi Audio") + x.bandwidth()/2)
+      .attr("y", d => y(d["Main Genre"]) + y.bandwidth()/2)
+      .attr("dy", "0.35em")
+      .attr("text-anchor", "middle")
+      .style("fill", d => d["Multi Audio Recs"] > maxValue/2 ? "white" : "#2c3e50")
+      .style("font-size", "12px")
+      .style("pointer-events", "none")
+      .text(d => d["Multi Audio Recs"]);
+
+    // Add axes with adjusted font size
+    svg.append("g")
+      .attr("class", "y axis")
+      .call(d3.axisLeft(y))
+      .selectAll("text")
+      .style("font-size", "13px")
+      .style("font-weight", "500");
+
+    svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", `translate(0, ${height})`)
+      .call(d3.axisBottom(x))
+      .selectAll("text")
+      .style("font-size", "14px")
+      .style("font-weight", "500");
+
+    // Add column labels
+    svg.append("text")
+      .attr("class", "heatmap-label")
+      .attr("x", x("Single Audio") + x.bandwidth()/2)
+      .attr("y", -25)
+      .text("Single Audio");
+
+    svg.append("text")
+      .attr("class", "heatmap-label")
+      .attr("x", x("Multi Audio") + x.bandwidth()/2)
+      .attr("y", -25)
+      .text("Multi Audio");
+
+    // Create legend
+    const legendWidth = 120, legendHeight = 25;
+    const legend = svg.append("g")
+      .attr("transform", `translate(${width + 25}, 20)`);
+
+    const legendScale = d3.scaleLinear()
+      .domain([0, maxValue])
+      .range([0, legendWidth]);
+
+    const legendAxis = d3.axisBottom(legendScale)
+      .ticks(5)
+      .tickSize(6);
+
+    legend.append("g")
+      .selectAll("rect")
+      .data(d3.range(legendWidth))
+      .enter()
+      .append("rect")
+      .attr("x", d => d)
+      .attr("y", 0)
+      .attr("width", 1)
+      .attr("height", legendHeight)
+      .attr("fill", d => colorScale(legendScale.invert(d)));
+
+    legend.append("g")
+      .attr("transform", `translate(0, ${legendHeight})`)
+      .call(legendAxis)
+      .selectAll("text")
+      .style("font-size", "12px");
+
+    legend.append("text")
+      .attr("x", legendWidth/2)
+      .attr("y", -10)
+      .attr("text-anchor", "middle")
+      .style("font-size", "13px")
+      .style("font-weight", "600")
+      .text("Recommendations");
+
+    // Add chart title
+    svg.append("text")
+      .attr("x", width/2)
+      .attr("y", -60)
+      .attr("text-anchor", "middle")
+      .style("font-size", "24px")
+      .style("font-weight", "500")
+      .style("opacity", 0.8)
+      
+  }).catch(error => {
+    console.error("Error loading the CSV file:", error);
+    // You might want to add some error handling UI here
+  });
+</script>
+
+</body>
+</html>

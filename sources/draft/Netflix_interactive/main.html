@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who's Watching?</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+   <style>
+  /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: #141414;
+    color: #fff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container Styling */
+  .container {
+    text-align: center;
+  }
+  
+  /* Heading Styling */
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 5rem;
+  }
+  
+  /* Profiles Grid Styling */
+  .profiles {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Individual Profile Styling */
+  .profile {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .profile:hover {
+    transform: scale(1.1);
+  }
+  
+  .profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    border: 3px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  
+  .profile:hover img {
+    border-color: #e50914;
+  }
+  
+  .profile p {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    color: #808080;
+    transition: color 0.2s ease;
+  }
+  
+  .profile:hover p {
+    color: #fff;
+  }
+  
+  /* Manage Profiles Button Styling */
+  .manage-profiles {
+    background-color: transparent;
+    border: 1px solid #808080;
+    color: #808080;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .manage-profiles:hover {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  #treemap, #sunburst {
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .tile {
+    stroke: #fff;
+  }
+  
+  .label {
+    font-size: 12px;
+    fill: #f4e3e3;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Who's Watching?</h1>
+    <div class="profiles">
+      <div class="profile" onclick="redirectToAnalysis('Profile 1')">
+        <img src="prof_brown.jpg" alt="You">
+        <p>Professor</p>
+      </div>
+      
+  </div>
+
+  <script>
+    function redirectToAnalysis(profileName) {
+      // Redirect to the analysis page
+      window.location.href = "analysis.html";
+    }
+  </script>
+</body>
+</html>
