@@ -246,54 +246,58 @@
                     </section>
                     <section id="education" class="my-24 scroll-mt-24">
                         <h2 class="text-base tracking-wider mb-10 text-center text-white">EDUCATION<hr/></h2>
-                        <div class="space-y-10 mb-8">
-                            <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 items-center justify-center cursor-pointer">
-                                <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/5"></div>
-                                <div class="z-10 sm:order-2 sm:col-span-6">
-                                    <h3 class="text-md font-semibold text-white">
-                                        <a href="https://www.mun.ca/" target="_blank" class="inline-flex items-baseline font-medium leading-tight text-white hover:text-blue-800 focus-visible:text-blue-800">
-                                            Memorial University of Newfoundland
-                                        </a>
-                                    </h3>
-                                    <p class="mt-2 text-base leading-normal text-white text-justify">
-                                        - M.Sc in Computer Science <br/>
-                                        - September 2024 - Present<br/>
-                                    </p>
-                                    <ul class="mt-2 flex flex-wrap text-base leading-loose">
-                                        <li class="mr-4 text-white">Python</li>
-                                        <li class="mr-4 text-white">JavaScript</li>
-                                        <li class="mr-4 text-white">Matplotlib</li>
-                                        <li class="mr-4 text-white">LangChain</li>
-                                    </ul>
-                                </div>
-                                <img src="./sources/MUN.png" alt="Edu 1" class="rounded border-2 border-slate-200/10 transition group-hover:border-white-30/30 sm:order-1 sm:col-span-1 sm:translate-y-1">
+                      
+                        <!-- Education Cards Grid -->
+                        <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto px-4">
+                          <!-- MUN Card -->
+                          <div class="bg-slate-800/50 rounded-xl p-6 border border-slate-700 shadow-purple-700 bg-purple-700 transition-all hover:shadow-lg hover:shadow-purple-500/10">
+                            <div class="flex items-start gap-4">
+                              <img src="./sources/MUN.png" alt="MUN" class="w-16 h-16 object-contain rounded-lg bg-white p-2">
+                              <div>
+                                <h3 class="text-xl font-bold text-white mb-1">
+                                  <a href="https://www.mun.ca/" target="_blank" class="hover:text-purple-700 transition-colors">
+                                    Memorial University
+                                  </a>
+                                </h3>
+                                <p class="text-purple-300 font-medium">M.Sc Computer Science</p>
+                                <p class="text-slate-300 text-sm mt-2">2024 - Present</p>
+                              </div>
                             </div>
-                        </div>
-                        <div class="space-y-8">
-                            <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 items-center justify-center cursor-pointer">
-                                <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/5"></div>
-                                <div class="z-10 sm:order-2 sm:col-span-6">
-                                    <h3 class="text-md font-semibold text-white">
-                                        <a href="https://www.aiub.edu/" target="_blank" class="inline-flex items-baseline font-medium leading-tight text-white hover:text-blue-800 focus-visible:text-blue-800">
-                                            American International University-Bangladesh
-                                        </a>
-                                    </h3>
-                                    <p class="mt-2 text-base leading-normal text-white text-justify">
-                                        - B.Sc in Computer Science and Engineering<br/>
-                                        - January 2020 - January 2024<br/>
-                                        - CGPA: 3.9 <br/>
-                                    </p>
-                                    <ul class="mt-2 flex flex-wrap text-base leading-loose">
-                                        <li class="mr-4 text-white">C++</li>
-                                        <li class="mr-4 text-white">JavaScript</li>
-                                        <li class="mr-4 text-white">SQL</li>
-                                        <li class="mr-4 text-white">Operating Systems</li>
-                                    </ul>
-                                </div>
-                                <img src="https://www.aiub.edu/Files/Templates/AIUBv3/assets/images/aiub-logo-white-border.svg" alt="Edu 2" class="rounded border-2 border-white-90/20 transition group-hover:border-white-30/30 sm:order-1 sm:col-span-1 sm:translate-y-1">
+                            <div class="mt-4 pt-4 border-t border-slate-700">
+                              <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">Python</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">JavaScript</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">Matplotlib</span>
+                              </div>
                             </div>
+                          </div>
+                      
+                          <!-- AIUB Card -->
+                          <div class="bg-slate-800/50 rounded-xl p-6 border border-slate-700 shadow-purple-700 bg-purple-700 transition-all hover:shadow-lg hover:shadow-purple-500/10">
+                            <div class="flex items-start gap-4">
+                              <img src="https://www.aiub.edu/Files/Templates/AIUBv3/assets/images/aiub-logo-white-border.svg" 
+                                   alt="AIUB" class="w-16 h-16 object-contain rounded-lg bg-white p-2">
+                              <div>
+                                <h3 class="text-xl font-bold text-white mb-1">
+                                  <a href="https://www.aiub.edu/" target="_blank" class="hover:text-purple-700 transition-colors">
+                                    AIUB
+                                  </a>
+                                </h3>
+                                <p class="text-purple-300 font-medium">B.Sc Computer Engineering</p>
+                                <p class="text-slate-300 text-sm mt-2">2020 - 2024 • CGPA: 3.9</p>
+                              </div>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-700">
+                              <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">C++</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">JavaScript</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">SQL</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">OS</span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                    </section>
+                      </section>
 
                     <section id="projects" class="my-24 scroll-mt-24">
                         <div class="container mx-auto px-1">
