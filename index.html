@@ -69,8 +69,8 @@
                                 My curiosity keeps me exploring new technologies, ensuring I create meaningful and reliable solutions.
                                 <br/> <br/>
                                 I have experience with JavaScript, Python, React Native, Next.js, Node.js, and MongoDB. 
-                                Lately, I’ve been diving into Three.js, Blender, and D3 for side projects. 
-                                Moving forward, I’m eager to deepen my skills in frontend development and data analysis.
+                                Lately, I’ve been diving into Next.js and PostgreSQL for side projects. 
+                                Moving forward, I’m eager to deepen my skills in data analysis and frontend development.
                                 <br/> <br/>
     
                                 When I’m not coding, you’ll probably find me gaming, lost in a book, solving puzzles, or off on some random adventure.
@@ -88,12 +88,12 @@
                                             <td class="px-4 py-2 border-b border-slate-300">NodeJS, Python, FastAPI, ExpressJS </td>
                                         </tr>
                                         <tr>
-                                            <td class="px-4 py-2 border-slate-300">Tools</td>
-                                            <td class="px-4 py-2 border-slate-300">Git, Figma, Canva, MongoDB</td>
+                                            <td class="px-4 py-2 border-b border-slate-300">Tools</td>
+                                            <td class="px-4 py-2 border-b border-slate-300">Git, Figma, Canva, MongoDB</td>
                                         </tr>
                                         <tr>
-                                            <td class="px-4 py-2 border-slate-300">Frameworks and libraries</td>
-                                            <td class="px-4 py-2 border-slate-300">Streamlit, Seaborn, Matplotlib, D3.js, Plotly, LangChain</td>
+                                            <td class="px-4 py-2  border-slate-300">Frameworks and libraries</td>
+                                            <td class="px-4 py-2  border-slate-300">Streamlit, Seaborn, Matplotlib, D3.js, Plotly, LangChain</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -109,36 +109,83 @@
     
                     <section id="experiences" class="mb-16 scroll-mt-24">
                         <h2 class="text-base tracking-wider mb-8 text-center text-white">EXPERIENCES<hr/></h2>
-                        <div class="space-y-14">
-                            <!-- Exp 1 -->
-                            <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 items-center justify-center cursor-pointer">
-                                <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/5"></div>
-                                <div class="z-10 sm:order-2 sm:col-span-6">
-                                    <h3 class="text-lg font-semibold text-white">
-                                        <a href="https://banglalink.net/en" class="inline-flex items-baseline font-medium leading-tight text-white hover:text-yellow-900 focus-visible:text-yellow-900">
-                                            Banglalink
-                                        </a>
-                                    </h3>
-                                    <div class="flex justify-between items-center text-white ">
-                                        <h5>Service Assurance Management Intern</h5>
-                                        <p class="text-xs font-light">June 2023-  Sept 2023</p>
-                                    </div>
-                                    <p class="mt-2 text-base leading-normal text-justify text-white">
-                                        Daily, Weekly, and Monthly Report Generation.
-                                        Automated data cleaning process using Python - Pandas, improving document retrieval speed by 25%.
-                                        Directly addressed over 800 customer concerns nationwide in 3 months.
-
-                                    </p>
-                                    </u>
-                                    <ul class="mt-2 flex flex-wrap text-base leading-loose">
-                                        <li class="mr-4 text-white">Python</li>
-                                        <li class="mr-4 text-white">Pandas</li>
-                                        <li class="mr-4 text-white">Excel</li>
-                                        <li class="mr-4 text-white">MS Office</li>
-                                    </ul>
-                                </div>
-                                <img src="./sources/Logo_of_Banglalink.png" alt="Ex 1" class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                        <div class="space-y-4">
+                        <!-- Experience Card -->
+                        <div class="group relative flex flex-col lg:flex-row bg-gradient-to-br from-[#2a0f55] to-slate-900 border border-slate-200/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 p-6 lg:p-8">
+                            
+                            <!-- Logo Section -->
+                            <div class="flex-shrink-0 flex justify-center items-center mb-6 lg:mb-0 lg:mr-8">
+                            <img 
+                                src="./sources/idee-digital-v1.png" 
+                                alt="Idee Digital Logo" 
+                                class="h-24 w-24 object-contain bg-white rounded-xl p-2 border border-white/20 shadow-md transition-transform group-hover:scale-105"
+                            />
                             </div>
+
+                            <!-- Content Section -->
+                            <div class="flex-1 text-white">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                                <h3 class="text-2xl font-bold text-yellow-400 tracking-tight">
+                                <a href="https://ideedigital.com.au/" target="_blank" class="hover:underline">Idee Digital</a>
+                                </h3>
+                                <span class="text-sm text-slate-300 mt-1 sm:mt-0">November 2024 - Present</span>
+                            </div>
+
+                            <h4 class="text-lg font-medium text-slate-100 mt-1">
+                                Web Developer Part-Time 
+                            </h4>
+
+                            <p class="text-slate-200 mt-3 text-justify leading-relaxed">
+                                Developed an Admin panel with CRUD functionalities using NextJS, AWS Lambda and DynamoDB. Developed an external payment page to receive charitable donations
+                            </p>
+
+                            <div class="mt-4 flex flex-wrap gap-2 text-sm font-medium">
+                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">NextJS</span>
+                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">AWS Lambda</span>
+                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">DynamoDB</span>
+                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">React</span>
+                            </div>
+                            </div>
+                        
+                        </div>
+
+                        <!-- Experience Card -->
+                        <div class="group relative flex flex-col lg:flex-row bg-gradient-to-br from-[#2a0f55] to-slate-900 border border-slate-200/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 p-6 lg:p-8">
+                            
+                            <!-- Logo Section -->
+                            <div class="flex-shrink-0 flex justify-center items-center mb-6 lg:mb-0 lg:mr-8">
+                            <img 
+                                src="./sources/Logo_of_Banglalink.png" 
+                                alt="Banglalink Logo" 
+                                class="h-24 w-24 object-contain bg-white rounded-xl p-2 border border-white/20 shadow-md transition-transform group-hover:scale-105"
+                            />
+                            </div>
+
+                            <!-- Content Section -->
+                            <div class="flex-1 text-white">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                                <h3 class="text-2xl font-bold text-yellow-400 tracking-tight">
+                                <a href="https://banglalink.net/en" target="_blank" class="hover:underline">Banglalink</a>
+                                </h3>
+                                <span class="text-sm text-slate-300 mt-1 sm:mt-0">June 2023 – Sept 2023</span>
+                            </div>
+
+                            <h4 class="text-lg font-medium text-slate-100 mt-1">
+                                Service Assurance Management Intern
+                            </h4>
+
+                            <p class="text-slate-200 mt-3 text-justify leading-relaxed">
+                                Generated daily, weekly, and monthly reports. Automated data cleaning using <strong>Pandas</strong>, improving retrieval speed by <strong>25%</strong>. Resolved over <strong>800+ customer concerns</strong> nationwide in just 3 months.
+                            </p>
+
+                            <div class="mt-4 flex flex-wrap gap-2 text-sm font-medium">
+                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">Python</span>
+                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">Pandas</span>
+                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">Excel</span>
+                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">MS Office</span>
+                            </div>
+                            </div>
+                        
                         </div>
                     </section>
     
@@ -182,7 +229,7 @@
                                         </a>
                                     </h3>
                                     <p class="mt-2 text-base leading-normal text-white text-justify">
-                                        Real-time stock data integration with trading and portfolio management.
+                                        Real-time stock data integration game with trading and portfolio management.
                                         Analytics dashboards with performance visualization and leaderboard tracking.
                                         Secure authentication, customizable game creation, and transaction history.
 
@@ -299,7 +346,7 @@
                         </div>
                       </section>
 
-                    <section id="projects" class="my-24 scroll-mt-24">
+                    <section id="creativeworks" class="my-24 scroll-mt-24">
                         <div class="container mx-auto px-1">
                             <h2 class="text-base tracking-wider mb-8 text-center text-white">CREATIVE WORKS<hr/></h2>
                             <div class="grid md:grid-cols-2 gap-10">
@@ -312,7 +359,7 @@
                                             Focused on product showcase, user-friendly navigation, and vibrant, brand-aligned visuals
                                         </p>
                                         <div class="flex space-x-4">
-                                            <a href="https://www.behance.net/tofahossainmoon" target="_blank" class="shadow-purple-700 bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-linear-to-b from-purple-500 to-purple-600 transition">
+                                            <a href="https://www.linkedin.com/in/tofahossain-moon/recent-activity/all/" target="_blank" class="shadow-purple-700 bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-linear-to-b from-purple-500 to-purple-600 transition">
                                                 View Projects
                                             </a>
                                             <!-- <a href="#" class="border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100 transition">
