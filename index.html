@@ -1,551 +1,684 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Tofa Hossain</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-        <link rel="icon" href="./sources/logo_main.png" type="image/x-icon">
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <style>
-            html { 
-                scroll-behavior: smooth;
-                scrollbar-width: thin;
-                scrollbar-color: rgba(0,0,0,0.2) transparent;
-            }
-            html::-webkit-scrollbar {
-                width: 8px;
-            }
-            html::-webkit-scrollbar-thumb {
-                background-color: rgba(0,0,0,0.2);
-                border-radius: 4px;
-            }
-            
-            .nav-text.active {
-                font-size: 20px;
-                color: #45556c;
-                letter-spacing: 0.4em;
-                margin-left: 1em;
-            }
 
-        </style>
-    </head>
-    <body>
-        <header>
-            <a href="#" class="bg-white rounded-lg">
-                <img src="./sources/logo.png" width="80" alt="Your Company Logo">
-            </a>
-                <ul class="justify-center items-center">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experiences">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#education">Education</a></li>
-                    
-                </ul>
-        </header>
-        <design>
-            <img src="./sources/stars.png" id= "stars">
-            <img src="./sources/moon.png" id= "moon">
-            <img src="./sources/mountain_behind.png" id= "mountain_behind">
-            <h2 id="text">Tofa Hossain</h2>
-            <a href ="mailto:tofa.hossainmoon@gmail.com" id="btn"> Contact me</a>
-            <img src="./sources/mountain_front.png" id= "mountain_front">
-
-        </design>
-
-        
-        <div class="max-w-screen-xl mx-auto px-6 md:px-12 lg:px-24 xl:px-36">
-            
-            <div class="lg:flex">
-                <!-- Right Section -->
-                <main class="lg:w-full pt-24">
-                    <section id="about" class="mb-16 scroll-mt-24">
-                        <h2 class="text-base tracking-wider mb-4 text-center text-white">ABOUT ME<hr/></h2>
-                        <div class="space-y-4 text-white">
-                            <p class="text-justify">
-                                I'm a master's student passionate about building interactive and creative applications. 
-                                I love breaking down complex ideas and turning them into elegant, intuitive visuals. 
-                                My curiosity keeps me exploring new technologies, ensuring I create meaningful and reliable solutions.
-                                <br/> <br/>
-                                I have experience with JavaScript, Python, React, Next.js, Node.js, and MongoDB. 
-                                Lately, I’ve been diving into Next.js and PostgreSQL for side projects. 
-                                Moving forward, I’m eager to deepen my skills in data analysis and frontend development.
-                                <br/> <br/>
-    
-                                When I’m not coding, you’ll probably find me gaming, lost in a book, solving puzzles, or off on some random adventure.
-                            </p>
-                            <div class="my-6 border-1 border-white p-4 rounded-lg">
-                                <h2 class="text-base tracking-wider text-white mb-2 text-center">SKILLS - AT A GLANCE</h2>
-                                <table class="table-auto w-full text-left text-base text-white">
-                                    <tbody>
-                                        <tr>
-                                            <td class="px-4 py-2 border-b border-slate-300">Frontend</td>
-                                            <td class="px-4 py-2 border-b border-slate-300">JavaScript, React-Native, NextJS, HTML, CSS, Tailwind</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="px-4 py-2 border-b border-slate-300">Backend</td>
-                                            <td class="px-4 py-2 border-b border-slate-300">NodeJS, Python, FastAPI, ExpressJS </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="px-4 py-2 border-b border-slate-300">Tools</td>
-                                            <td class="px-4 py-2 border-b border-slate-300">Git, Figma, Canva, MongoDB</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="px-4 py-2  border-slate-300">Frameworks and libraries</td>
-                                            <td class="px-4 py-2  border-slate-300">Streamlit, Seaborn, Matplotlib, D3.js, Plotly, LangChain</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="flex space-x-2 justify-center">
-                                
-                                <a href="./sources/Tofa Hossain Resume.pdf" target="_blank" class="mt-2 w-1/2 text-center text-xl inline-block shadow shadow-purple-700 bg-purple-700  text-white px-4 py-3 rounded-lg hover:bg-linear-to-b from-purple-500 to-purple-600 transition shadow-md">
-                                    Resume ↗
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-    
-                    <section id="experiences" class="mb-16 scroll-mt-24">
-                        <h2 class="text-base tracking-wider mb-8 text-center text-white">EXPERIENCES<hr/></h2>
-                        <div class="space-y-4">
-                        <!-- Experience Card -->
-                        <div class="group relative flex flex-col lg:flex-row bg-gradient-to-br from-[#2a0f55] to-slate-900 border border-slate-200/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 p-6 lg:p-8">
-                            
-                            <!-- Logo Section -->
-                            <div class="flex-shrink-0 flex justify-center items-center mb-6 lg:mb-0 lg:mr-8">
-                            <img 
-                                src="./sources/idee-digital-v1.png" 
-                                alt="Idee Digital Logo" 
-                                class="h-24 w-24 object-contain bg-white rounded-xl p-2 border border-white/20 shadow-md transition-transform group-hover:scale-105"
-                            />
-                            </div>
-
-                            <!-- Content Section -->
-                            <div class="flex-1 text-white">
-                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                                <h3 class="text-2xl font-bold text-yellow-400 tracking-tight">
-                                <a href="https://ideedigital.com.au/" target="_blank" class="hover:underline">Idee Digital</a>
-                                </h3>
-                                <span class="text-sm text-slate-300 mt-1 sm:mt-0">November 2024 - Present</span>
-                            </div>
-
-                            <h4 class="text-lg font-medium text-slate-100 mt-1">
-                                Web Developer Part-Time 
-                            </h4>
-
-                            <p class="text-slate-200 mt-3 text-justify leading-relaxed">
-                                Developed an Admin panel with CRUD functionalities using <strong>NextJS</strong>, <strong>AWS Lambda</strong> and <strong>DynamoDB</strong>. Developed an external payment page to receive charitable donations
-                            </p>
-
-                            <div class="mt-4 flex flex-wrap gap-2 text-sm font-medium">
-                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">NextJS</span>
-                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">AWS Lambda</span>
-                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">DynamoDB</span>
-                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">React</span>
-                            </div>
-                            </div>
-                        
-                        </div>
-
-                        <!-- Experience Card -->
-                        <div class="group relative flex flex-col lg:flex-row bg-gradient-to-br from-[#2a0f55] to-slate-900 border border-slate-200/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 p-6 lg:p-8">
-                            
-                            <!-- Logo Section -->
-                            <div class="flex-shrink-0 flex justify-center items-center mb-6 lg:mb-0 lg:mr-8">
-                            <img 
-                                src="./sources/Logo_of_Banglalink.png" 
-                                alt="Banglalink Logo" 
-                                class="h-24 w-24 object-contain bg-white rounded-xl p-2 border border-white/20 shadow-md transition-transform group-hover:scale-105"
-                            />
-                            </div>
-
-                            <!-- Content Section -->
-                            <div class="flex-1 text-white">
-                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                                <h3 class="text-2xl font-bold text-yellow-400 tracking-tight">
-                                <a href="https://banglalink.net/en" target="_blank" class="hover:underline">Banglalink</a>
-                                </h3>
-                                <span class="text-sm text-slate-300 mt-1 sm:mt-0">June 2023 – Sept 2023</span>
-                            </div>
-
-                            <h4 class="text-lg font-medium text-slate-100 mt-1">
-                                Service Assurance Management Intern
-                            </h4>
-
-                            <p class="text-slate-200 mt-3 text-justify leading-relaxed">
-                                Generated daily, weekly, and monthly reports. Automated data cleaning using <strong>Pandas</strong>, improving retrieval speed by <strong>25%</strong>. Resolved over <strong>800+ customer concerns</strong> nationwide in just 3 months.
-                            </p>
-
-                            <div class="mt-4 flex flex-wrap gap-2 text-sm font-medium">
-                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">Python</span>
-                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">Pandas</span>
-                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">Excel</span>
-                                <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">MS Office</span>
-                            </div>
-                            </div>
-                        
-                        </div>
-                    </section>
-    
-                    <section id="projects" class="mb-16 scroll-mt-24">
-                        <h2 class="text-base tracking-wider mb-8 text-center text-white">PROJECTS<hr/></h2>
-                        <div class="space-y-14">
-                            <!-- Project 1 -->
-                            <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 items-center justify-center cursor-pointer">
-                                <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/5"></div>
-                                <div class="z-10 sm:order-2 sm:col-span-6">
-                                    <h3 class="text-lg font-semibold text-white">
-                                        <a href="./sources/projects/Netflix_interactive/main.html" target="_blank" class="inline-flex items-baseline font-medium leading-tight text-white hover:text-blue-800 focus-visible:text-blue-800">
-                                            Netflix Interactive (Data Visualization)
-                                        </a>
-                                    </h3>
-                                    <p class="mt-2 text-base leading-normal text-white text-justify">
-                                        Comprehensive analysis of Netflix’s content trends and recommendation patterns.
-                                        Interactive and static visualizations for data-driven insights.
-
-                                    </p>
-                                    <ul class="mt-2 flex flex-wrap text-base leading-loose">
-                                        <li class="mr-4 text-white">JavaScript</li>
-                                        <li class="mr-4 text-white">Matplotlib</li>
-                                        <li class="mr-4 text-white">D3.js</li>
-                                        <li class="mr-4 text-white">Plotly</li>
-                                    </ul>
-                                </div>
-
-                                <a href="./sources/projects/Netflix_interactive/main.html" target="_blank" class="contents">
-                                    <img src="./sources/netflix.png" alt="Project 1" class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1">
-                                </a>
-                            </div>
-    
-                            <!-- Project 2 -->
-                            <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 items-center justify-center cursor-pointer">
-                                <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/5"></div>
-                                <div class="z-10 sm:order-2 sm:col-span-6">
-                                    <h3 class="text-lg font-semibold text-white">
-                                        <a href="#" class="inline-flex items-baseline font-medium leading-tight text-white hover:text-blue-800 focus-visible:text-blue-800">
-                                            Stock Trading Simulation( Software Engineering)
-                                        </a>
-                                    </h3>
-                                    <p class="mt-2 text-base leading-normal text-white text-justify">
-                                        Real-time stock data integration game with trading and portfolio management.
-                                        Analytics dashboards with performance visualization and leaderboard tracking.
-                                        Secure authentication, customizable game creation, and transaction history.
-
-                                    </p>
-                                    <ul class="mt-2 flex flex-wrap text-base leading-loose">
-                                        <li class="mr-4 text-white">Node.js</li>
-                                        <li class="mr-4 text-white">EJS </li>
-                                        <li class="mr-4 text-white">MongoDB </li>
-                                    </ul>
-                                </div>
-                                <img src="./sources/stock.jpeg" alt="Project 2" class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1">
-                            </div>
-                            <!-- Project 3 -->
-                            <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 items-center justify-center cursor-pointer">
-                                <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/5"></div>
-                                <div class="z-10 sm:order-2 sm:col-span-6">
-                                    <h3 class="text-lg font-semibold text-white">
-                                        <a href="https://github.com/moontrovert/Legal-Document-Query-System" target="_blank" class="inline-flex items-baseline font-medium leading-tight text-white hover:text-blue-800 focus-visible:text-blue-800">
-                                            Legal Document Query System (Data Mining)
-
-                                        </a>
-                                    </h3>
-                                    <p class="mt-2 text-base leading-normal text-white text-justify">
-                                        Integrated a RAG pipeline to retrieve and process relevant legal documents for accurate query responses.
-                                        Implemented Legal-BERT and OpenAI models for legal query responses to evaluate performance.
-                                        Conducted comparative analysis using BLEU score to evaluate the accuracy and contextual relevance of model outputs.
-                                        Developed a Streamlit-based user interface for seamless interaction and real-time query processing.
-
-                                    </p>
-                                    <ul class="mt-2 flex flex-wrap text-base leading-loose">
-                                        <li class="mr-4 text-white">Python</li>
-                                        <li class="mr-4 text-white">Streamlit</li>
-                                        <li class="mr-4 text-white">LangChain</li>
-                                        <li class="mr-4 text-white">OpenAI</li>
-                                    </ul>
-                                </div>
-                                <img src="./sources/Legal.png" alt="Project 3" class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1">
-                            </div>
-                            <!-- Project 4 -->
-                            <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 items-center justify-center cursor-pointer">
-                                <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/5"></div>
-                                <div class="z-10 sm:order-2 sm:col-span-6">
-                                    <h3 class="text-lg font-semibold text-white">
-                                        <a href="https://github.com/moontrovert/React-ToDone" target="_blank" class="contents">
-                                            ToDone 
-                                        </a>
-                                    </h3>
-                                    <p class="mt-2 text-base leading-normal text-white text-justify">
-                                        A simple modern Todo List application built with React, Express.js, and a dark theme UI. Features real-time updates and persistent storage.
-                                    </p>
-                                    <ul class="mt-2 flex flex-wrap text-base leading-loose">
-                                        <li class="mr-4 text-white">React</li>
-                                        <li class="mr-4 text-white">JavaScript</li>
-                                        <li class="mr-4 text-white">Express.js</li>
-                                        <li class="mr-4 text-white">Node.js</li>
-                                    </ul>
-                                </div>
-                                <img src="./sources/screenshot.png" alt="ToDone Project" class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1">
-                            </div> 
-                            <!-- Project 5 -->
-                            <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 items-center justify-center cursor-pointer">
-                                <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/5"></div>
-                                <div class="z-10 sm:order-2 sm:col-span-6">
-                                    <h3 class="text-lg font-semibold text-white">
-                                        <a href="#" class="inline-flex items-baseline font-medium leading-tight text-white hover:text-blue-800 focus-visible:text-blue-800">
-                                            Personal Portfolio
-                                        </a>
-                                    </h3>
-                                    <p class="mt-2 text-base leading-normal text-white text-justify">
-                                        This portfolio website was built with HTML, Tailwind CSS and vanilla JavaScript.
-                                        It showcases my projects, experiences, and skills in a clean and minimalistic design.
-                                    </p>
-                                    <ul class="mt-2 flex flex-wrap text-base leading-loose">
-                                        <li class="mr-4 text-white">HTML</li>
-                                        <li class="mr-4 text-white">JavaScript</li>
-                                        <li class="mr-4 text-white">Tailwindcss</li>
-                                    </ul>
-                                </div>
-                                <img src="./sources/Website Laptop Mockup Instagram Post.png" alt="Project 4" class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1">
-                            </div>
-                             
-                        </div>
-                    </section>
-                    <section id="education" class="my-24 scroll-mt-24">
-                        <h2 class="text-base tracking-wider mb-10 text-center text-white">EDUCATION<hr/></h2>
-                      
-                        <!-- Education Cards Grid -->
-                        <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto px-4">
-                          <!-- MUN Card -->
-                          <div class="bg-slate-800/50 rounded-xl p-6 border border-slate-700 shadow-purple-700 bg-purple-700 transition-all hover:shadow-lg hover:shadow-purple-500/10">
-                            <div class="flex items-start gap-4">
-                              <img src="./sources/MUN.png" alt="MUN" class="w-16 h-16 object-contain rounded-lg bg-white p-2">
-                              <div>
-                                <h3 class="text-xl font-bold text-white mb-1">
-                                  <a href="https://www.mun.ca/" target="_blank" class="hover:text-purple-700 transition-colors">
-                                    Memorial University
-                                  </a>
-                                </h3>
-                                <p class="text-purple-300 font-medium">M.Sc Computer Science</p>
-                                <p class="text-slate-300 text-sm mt-2">2024 - Present</p>
-                              </div>
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-slate-700">
-                              <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">Python</span>
-                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">JavaScript</span>
-                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">Matplotlib</span>
-                              </div>
-                            </div>
-                          </div>
-                      
-                          <!-- AIUB Card -->
-                          <div class="bg-slate-800/50 rounded-xl p-6 border border-slate-700 shadow-purple-700 bg-purple-700 transition-all hover:shadow-lg hover:shadow-purple-500/10">
-                            <div class="flex items-start gap-4">
-                              <img src="https://www.aiub.edu/Files/Templates/AIUBv3/assets/images/aiub-logo-white-border.svg" 
-                                   alt="AIUB" class="w-16 h-16 object-contain rounded-lg bg-white p-2">
-                              <div>
-                                <h3 class="text-xl font-bold text-white mb-1">
-                                  <a href="https://www.aiub.edu/" target="_blank" class="hover:text-purple-700 transition-colors">
-                                    AIUB
-                                  </a>
-                                </h3>
-                                <p class="text-purple-300 font-medium">B.Sc Computer Engineering</p>
-                                <p class="text-slate-300 text-sm mt-2">2020 - 2024 • CGPA: 3.9</p>
-                              </div>
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-slate-700">
-                              <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">C++</span>
-                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">JavaScript</span>
-                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">SQL</span>
-                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">OS</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-
-                    <section id="creativeworks" class="my-24 scroll-mt-24">
-                        <div class="container mx-auto px-1">
-                            <h2 class="text-base tracking-wider mb-8 text-center text-white">CREATIVE WORKS<hr/></h2>
-                            <div class="grid md:grid-cols-2 gap-10">
-                                <!-- Project 1 -->
-                                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
-                                    <img src="./sources/ui.png" alt="Project 1" class="w-full h-48 object-cover">
-                                    <div class="p-6">
-                                        <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
-                                        <p class="text-gray-700 mb-4">
-                                            Focused on product showcase, user-friendly navigation, and vibrant, brand-aligned visuals
-                                        </p>
-                                        <div class="flex space-x-4">
-                                            <a href="https://www.linkedin.com/in/tofahossain-moon/recent-activity/all/" target="_blank" class="shadow-purple-700 bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-linear-to-b from-purple-500 to-purple-600 transition">
-                                                View Projects
-                                            </a>
-                                            <!-- <a href="#" class="border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100 transition">
-                                                GitHub
-                                            </a> -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Project 2 -->
-                                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
-                                    <img src="./sources/posters.png" alt="Project 2" class="w-full h-48 object-cover">
-                                    <div class="p-6">
-                                        <h3 class="text-xl font-bold mb-2">Graphic Design</h3>
-                                        <p class="text-gray-700 mb-4">
-                                            Dynamic visuals focusing on the event's key message and audience engagement 
-                                        </p>
-                                        <div class="flex space-x-4">
-                                            <a href="#" class="shadow-purple-700 bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-linear-to-b from-purple-500 to-purple-600 transition">
-                                                View Projects
-                                            </a>
-                                            <!-- <a href="#" class="border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100 transition">
-                                                GitHub
-                                            </a> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    
-    <!-- Contact Section -->
-    <section id="contact" class="w-full shadow-purple-700 bg-purple-1000 text-white py-20 font-mono">
-        <div class="container mx-auto px-5 text-center">
-            <h2 class="pixel-text text-4xl text-purple-450 uppercase">
-                Contact Me
-            </h2>
-            
-            <p class="text-xl mb-10">
-                <span id="typing-text"></span><span class="blinking-cursor">|</span>
-            </p>
-            <div class="flex justify-center space-x-6">
-                <a href="mailto:tofa.hossainmoon@gmail.com" class="hover:text-blue-200 transition" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                </a>
-                <a href="https://github.com/moontrovert" class="hover:text-blue-200 transition" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a>
-                <a href="https://www.linkedin.com/in/tofahossain-moon/" class="hover:text-blue-200 transition" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const text = "I'm always open to discussing new projects, opportunities, or collaborations.";
-            let index = 0;
-            const typingElement = document.getElementById("typing-text");
-    
-            function typeText() {
-                if (index < text.length) {
-                    typingElement.textContent += text.charAt(index);
-                    index++;
-                    setTimeout(typeText, 30); // Adjust speed here
-                }
-            }
-    
-            function restartTyping() {
-                typingElement.textContent = ""; // Clear text
-                index = 0; // Reset index
-                typeText(); // Start typing again
-            }
-    
-            typeText(); // Start typing initially
-    
-            setInterval(restartTyping, 9000); // Restart every 1 minute (60000ms)
-        });
-    </script>
-    
+<head>
+    <title>Tofa Hossain</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./sources/logo_main.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        .blinking-cursor {
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: white;
-            animation: blink 0.8s infinite;
+        html {
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
         }
-    
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
+
+        html::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .nav-text.active {
+            font-size: 20px;
+            color: #45556c;
+            letter-spacing: 0.4em;
+            margin-left: 1em;
         }
     </style>
-    
+</head>
 
-    
-                </main>
-            </div>
-        </div>
-    
-        <script>
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-    
-            document.addEventListener("DOMContentLoaded", function() {
-                const navLinks = document.querySelectorAll("#main-nav a");
-                const sections = document.querySelectorAll("section");
-            
-                // Create an intersection observer to detect when sections are in view
-                const observer = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        const navLink = document.querySelector(`a[href="#${entry.target.id}"]`);
-            
-                        // If section is in view, add active class to nav item
-                        if (entry.isIntersecting) {
-                            navLink.querySelector(".nav-text").classList.add("active");
-                        } else {
-                            navLink.querySelector(".nav-text").classList.remove("active");
+<body>
+    <header>
+        <a href="#" class="bg-white rounded-lg">
+            <img src="./sources/logo.png" width="80" alt="Your Company Logo">
+        </a>
+        <ul class="justify-center items-center">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experiences">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+
+        </ul>
+    </header>
+    <design>
+        <img src="./sources/stars.png" id="stars">
+        <img src="./sources/moon.png" id="moon">
+        <img src="./sources/mountain_behind.png" id="mountain_behind">
+        <h2 id="text">Tofa Hossain</h2>
+        <a href="mailto:tofa.hossainmoon@gmail.com" id="btn"> Contact me</a>
+        <img src="./sources/mountain_front.png" id="mountain_front">
+
+    </design>
+
+
+    <div class="max-w-screen-xl mx-auto px-6 md:px-12 lg:px-24 xl:px-36">
+
+        <div class="lg:flex">
+            <!-- Right Section -->
+            <main class="lg:w-full pt-24">
+                <section id="about" class="mb-16 scroll-mt-24">
+                    <h2 class="text-base tracking-wider mb-4 text-center text-white">ABOUT ME
+                        <hr />
+                    </h2>
+                    <div class="space-y-4 text-white">
+                        <p class="text-justify">
+                            I'm a master's student passionate about building interactive and creative applications.
+                            I love breaking down complex ideas and turning them into elegant, intuitive visuals.
+                            My curiosity keeps me exploring new technologies, ensuring I create meaningful and reliable
+                            solutions.
+                            <br /> <br />
+                            I have experience with JavaScript, Python, React, Next.js, Node.js, and MongoDB.
+                            Lately, I’ve been diving into Next.js and PostgreSQL for side projects.
+                            Moving forward, I’m eager to deepen my skills in data analysis and frontend development.
+                            <br /> <br />
+
+                            When I’m not coding, you’ll probably find me gaming, lost in a book, solving puzzles, or off
+                            on some random adventure.
+                        </p>
+                        <div class="my-6 border-1 border-white p-4 rounded-lg">
+                            <h2 class="text-base tracking-wider text-white mb-2 text-center">SKILLS - AT A GLANCE</h2>
+                            <table class="table-auto w-full text-left text-base text-white">
+                                <tbody>
+                                    <tr>
+                                        <td class="px-4 py-2 border-b border-slate-300">Frontend</td>
+                                        <td class="px-4 py-2 border-b border-slate-300">JavaScript, React-Native,
+                                            NextJS, HTML, CSS, Tailwind</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 border-b border-slate-300">Backend</td>
+                                        <td class="px-4 py-2 border-b border-slate-300">NodeJS, Python, FastAPI,
+                                            ExpressJS </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 border-b border-slate-300">Tools</td>
+                                        <td class="px-4 py-2 border-b border-slate-300">Git, Figma, Canva, MongoDB</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2  border-slate-300">Frameworks and libraries</td>
+                                        <td class="px-4 py-2  border-slate-300">Streamlit, Seaborn, Matplotlib, D3.js,
+                                            Plotly, LangChain</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="flex space-x-2 justify-center">
+
+                            <a href="./sources/Tofa Hossain Resume.pdf" target="_blank"
+                                class="mt-2 w-1/2 text-center text-xl inline-block shadow shadow-purple-700 bg-purple-700  text-white px-4 py-3 rounded-lg hover:bg-linear-to-b from-purple-500 to-purple-600 transition shadow-md">
+                                Resume ↗
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="experiences" class="mb-16 scroll-mt-24">
+                    <h2 class="text-base tracking-wider mb-8 text-center text-white">EXPERIENCES
+                        <hr />
+                    </h2>
+                    <div class="space-y-4">
+                        <!-- Experience Card -->
+                        <div
+                            class="group relative flex flex-col lg:flex-row bg-gradient-to-br from-[#2a0f55] to-slate-900 border border-slate-200/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 p-6 lg:p-8">
+
+                            <!-- Logo Section -->
+                            <div class="flex-shrink-0 flex justify-center items-center mb-6 lg:mb-0 lg:mr-8">
+                                <img src="./sources/projects/wsp_logo.jpg" alt="WSP Logo"
+                                    class="h-24 w-24 object-contain bg-white rounded-xl p-2 border border-white/20 shadow-md transition-transform group-hover:scale-105" />
+                            </div>
+
+                            <!-- Content Section -->
+                            <div class="flex-1 text-white">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                                    <h3 class="text-2xl font-bold text-yellow-400 tracking-tight">
+                                        <a href="https://www.wsp.com/" target="_blank" class="hover:underline">WSP</a>
+                                    </h3>
+                                    <span class="text-sm text-slate-300 mt-1 sm:mt-0">September 2025 - April 2026</span>
+                                </div>
+
+                                <h4 class="text-lg font-medium text-slate-100 mt-1">
+                                    Full-Stack Developer Co-op, Full-time
+                                </h4>
+
+                                <ul class="text-slate-200 mt-3 leading-relaxed list-disc list-inside space-y-2">
+                                    <li>Contributed in multiple repositories, including web and mobile applications by
+                                        resolving over <strong>22 Jira tickets</strong></li>
+                                    <li>Developed features, maintained and tested <strong>.NET backend</strong> to
+                                        improve software quality and user experience</li>
+                                    <li>Provided reliable solutions to complex interdependent issues by communicating
+                                        with different internal departments</li>
+                                </ul>
+
+                                <div class="mt-4 flex flex-wrap gap-2 text-sm font-medium">
+                                    <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">.NET</span>
+                                    <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">Full-Stack</span>
+                                    <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">Web Development</span>
+                                    <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">Mobile
+                                        Development</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Experience Card -->
+                        <div
+                            class="group relative flex flex-col lg:flex-row bg-gradient-to-br from-[#2a0f55] to-slate-900 border border-slate-200/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 p-6 lg:p-8">
+
+                            <!-- Logo Section -->
+                            <div class="flex-shrink-0 flex justify-center items-center mb-6 lg:mb-0 lg:mr-8">
+                                <img src="./sources/idee-digital-v1.png" alt="Idee Digital Logo"
+                                    class="h-24 w-24 object-contain bg-white rounded-xl p-2 border border-white/20 shadow-md transition-transform group-hover:scale-105" />
+                            </div>
+
+                            <!-- Content Section -->
+                            <div class="flex-1 text-white">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                                    <h3 class="text-2xl font-bold text-yellow-400 tracking-tight">
+                                        <a href="https://ideedigital.com.au/" target="_blank"
+                                            class="hover:underline">Idee Digital</a>
+                                    </h3>
+                                    <span class="text-sm text-slate-300 mt-1 sm:mt-0">November 2024 - August 2025</span>
+                                </div>
+
+                                <h4 class="text-lg font-medium text-slate-100 mt-1">
+                                    Web Developer Part-Time
+                                </h4>
+
+                                <ul class="text-slate-200 mt-3 leading-relaxed list-disc list-inside space-y-2">
+                                    <li>Developed an admin panel with dashboard to manage contents and analyze user
+                                        engagement using NextJS and AWS.</li>
+                                    <li>Developed an external <a
+                                            href="https://master.d3rqvrz8seaqh8.amplifyapp.com/?fbclid=IwY2xjawKZobxleHRuA2FlbQIxMABicmlkETE2NUE3bm1rSkdLdVFHNFZsAR5nU6hxSyXE9X7jm7tgRfPS39FKeoNumh34JLQGs-ykQtReBB0bwPg7uemX6w_aem_r7i3ug4Cpe8dqM7fYBOXSw"
+                                            target="_blank" class="hover:underline text-blue-400">payment page</a> to
+                                        receive charitable donations, as a work
+                                        around method.</li>
+                                    <li>Designed UI and banners for websites using Figma to enhance front-end user
+                                        experience.</li>
+                                </ul>
+
+                                <div class="mt-4 flex flex-wrap gap-2 text-sm font-medium">
+                                    <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">NextJS</span>
+                                    <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">AWS Lambda</span>
+                                    <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">DynamoDB</span>
+                                    <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">React</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Experience Card -->
+                        <div
+                            class="group relative flex flex-col lg:flex-row bg-gradient-to-br from-[#2a0f55] to-slate-900 border border-slate-200/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 p-6 lg:p-8">
+
+                            <!-- Logo Section -->
+                            <div class="flex-shrink-0 flex justify-center items-center mb-6 lg:mb-0 lg:mr-8">
+                                <img src="./sources/Logo_of_Banglalink.png" alt="Banglalink Logo"
+                                    class="h-24 w-24 object-contain bg-white rounded-xl p-2 border border-white/20 shadow-md transition-transform group-hover:scale-105" />
+                            </div>
+
+                            <!-- Content Section -->
+                            <div class="flex-1 text-white">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                                    <h3 class="text-2xl font-bold text-yellow-400 tracking-tight">
+                                        <a href="https://banglalink.net/en" target="_blank"
+                                            class="hover:underline">Banglalink</a>
+                                    </h3>
+                                    <span class="text-sm text-slate-300 mt-1 sm:mt-0">June 2023 – Sept 2023</span>
+                                </div>
+
+                                <h4 class="text-lg font-medium text-slate-100 mt-1">
+                                    Service Assurance Management Intern
+                                </h4>
+
+                                <ul class="text-slate-200 mt-3 leading-relaxed list-disc list-inside space-y-2">
+                                    <li>Daily, weekly, and monthly report generation on telecommunication network
+                                        failure point data.</li>
+                                    <li>Created an automation for data cleaning using Python - Pandas, improving
+                                        document retrieval speed by 25%.</li>
+                                    <li>Directly addressed 800+ customer concerns over call and email nationwide.</li>
+                                </ul>
+
+                                <div class="mt-4 flex flex-wrap gap-2 text-sm font-medium">
+                                    <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">Python</span>
+                                    <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">Pandas</span>
+                                    <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">Excel</span>
+                                    <span class="bg-white text-[#2a0f55] px-3 py-1 rounded-full">MS Office</span>
+                                </div>
+                            </div>
+
+                        </div>
+                </section>
+
+                <section id="projects" class="mb-16 scroll-mt-24">
+                    <h2 class="text-base tracking-wider mb-8 text-center text-white">PROJECTS
+                        <hr />
+                    </h2>
+                    <div class="space-y-14">
+                        <!-- Project 1 -->
+                        <div
+                            class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 items-center justify-center cursor-pointer">
+                            <div
+                                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/5">
+                            </div>
+                            <div class="z-10 sm:order-2 sm:col-span-6">
+                                <h3 class="text-lg font-semibold text-white">
+                                    <a href="./sources/projects/Netflix_interactive/main.html" target="_blank"
+                                        class="inline-flex items-baseline font-medium leading-tight text-white hover:text-blue-800 focus-visible:text-blue-800">
+                                        Netflix Interactive (Data Visualization)
+                                    </a>
+                                </h3>
+                                <p class="mt-2 text-base leading-normal text-white text-justify">
+                                    Comprehensive analysis of Netflix’s content trends and recommendation patterns.
+                                    Interactive and static visualizations for data-driven insights.
+
+                                </p>
+                                <ul class="mt-2 flex flex-wrap text-base leading-loose">
+                                    <li class="mr-4 text-white">JavaScript</li>
+                                    <li class="mr-4 text-white">Matplotlib</li>
+                                    <li class="mr-4 text-white">D3.js</li>
+                                    <li class="mr-4 text-white">Plotly</li>
+                                </ul>
+                            </div>
+
+                            <a href="./sources/projects/Netflix_interactive/main.html" target="_blank" class="contents">
+                                <img src="./sources/netflix.png" alt="Project 1"
+                                    class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                            </a>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div
+                            class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 items-center justify-center cursor-pointer">
+                            <div
+                                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/5">
+                            </div>
+                            <div class="z-10 sm:order-2 sm:col-span-6">
+                                <h3 class="text-lg font-semibold text-white">
+                                    <a href="#"
+                                        class="inline-flex items-baseline font-medium leading-tight text-white hover:text-blue-800 focus-visible:text-blue-800">
+                                        Stock Trading Simulation( Software Engineering)
+                                    </a>
+                                </h3>
+                                <p class="mt-2 text-base leading-normal text-white text-justify">
+                                    Real-time stock data integration game with trading and portfolio management.
+                                    Analytics dashboards with performance visualization and leaderboard tracking.
+                                    Secure authentication, customizable game creation, and transaction history.
+
+                                </p>
+                                <ul class="mt-2 flex flex-wrap text-base leading-loose">
+                                    <li class="mr-4 text-white">Node.js</li>
+                                    <li class="mr-4 text-white">EJS </li>
+                                    <li class="mr-4 text-white">MongoDB </li>
+                                </ul>
+                            </div>
+                            <img src="./sources/stock.jpeg" alt="Project 2"
+                                class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                        </div>
+                        <!-- Project 3 -->
+                        <div
+                            class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 items-center justify-center cursor-pointer">
+                            <div
+                                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/5">
+                            </div>
+                            <div class="z-10 sm:order-2 sm:col-span-6">
+                                <h3 class="text-lg font-semibold text-white">
+                                    <a href="https://github.com/moontrovert/Legal-Document-Query-System" target="_blank"
+                                        class="inline-flex items-baseline font-medium leading-tight text-white hover:text-blue-800 focus-visible:text-blue-800">
+                                        Legal Document Query System (Data Mining)
+
+                                    </a>
+                                </h3>
+                                <p class="mt-2 text-base leading-normal text-white text-justify">
+                                    Integrated a RAG pipeline to retrieve and process relevant legal documents for
+                                    accurate query responses.
+                                    Implemented Legal-BERT and OpenAI models for legal query responses to evaluate
+                                    performance.
+                                    Conducted comparative analysis using BLEU score to evaluate the accuracy and
+                                    contextual relevance of model outputs.
+                                    Developed a Streamlit-based user interface for seamless interaction and real-time
+                                    query processing.
+
+                                </p>
+                                <ul class="mt-2 flex flex-wrap text-base leading-loose">
+                                    <li class="mr-4 text-white">Python</li>
+                                    <li class="mr-4 text-white">Streamlit</li>
+                                    <li class="mr-4 text-white">LangChain</li>
+                                    <li class="mr-4 text-white">OpenAI</li>
+                                </ul>
+                            </div>
+                            <img src="./sources/Legal.png" alt="Project 3"
+                                class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                        </div>
+                        <!-- Project 4 -->
+                        <div
+                            class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 items-center justify-center cursor-pointer">
+                            <div
+                                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/5">
+                            </div>
+                            <div class="z-10 sm:order-2 sm:col-span-6">
+                                <h3 class="text-lg font-semibold text-white">
+                                    <a href="https://github.com/moontrovert/React-ToDone" target="_blank"
+                                        class="contents">
+                                        ToDone
+                                    </a>
+                                </h3>
+                                <p class="mt-2 text-base leading-normal text-white text-justify">
+                                    A simple modern Todo List application built with React, Express.js, and a dark theme
+                                    UI. Features real-time updates and persistent storage.
+                                </p>
+                                <ul class="mt-2 flex flex-wrap text-base leading-loose">
+                                    <li class="mr-4 text-white">React</li>
+                                    <li class="mr-4 text-white">JavaScript</li>
+                                    <li class="mr-4 text-white">Express.js</li>
+                                    <li class="mr-4 text-white">Node.js</li>
+                                </ul>
+                            </div>
+                            <img src="./sources/screenshot.png" alt="ToDone Project"
+                                class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                        </div>
+                        <!-- Project 5 -->
+                        <div
+                            class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 items-center justify-center cursor-pointer">
+                            <div
+                                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/5">
+                            </div>
+                            <div class="z-10 sm:order-2 sm:col-span-6">
+                                <h3 class="text-lg font-semibold text-white">
+                                    <a href="#"
+                                        class="inline-flex items-baseline font-medium leading-tight text-white hover:text-blue-800 focus-visible:text-blue-800">
+                                        Personal Portfolio
+                                    </a>
+                                </h3>
+                                <p class="mt-2 text-base leading-normal text-white text-justify">
+                                    This portfolio website was built with HTML, Tailwind CSS and vanilla JavaScript.
+                                    It showcases my projects, experiences, and skills in a clean and minimalistic
+                                    design.
+                                </p>
+                                <ul class="mt-2 flex flex-wrap text-base leading-loose">
+                                    <li class="mr-4 text-white">HTML</li>
+                                    <li class="mr-4 text-white">JavaScript</li>
+                                    <li class="mr-4 text-white">Tailwindcss</li>
+                                </ul>
+                            </div>
+                            <img src="./sources/Website Laptop Mockup Instagram Post.png" alt="Project 4"
+                                class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                        </div>
+
+                    </div>
+                </section>
+                <section id="education" class="my-24 scroll-mt-24">
+                    <h2 class="text-base tracking-wider mb-10 text-center text-white">EDUCATION
+                        <hr />
+                    </h2>
+
+                    <!-- Education Cards Grid -->
+                    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto px-4">
+                        <!-- MUN Card -->
+                        <div
+                            class="bg-slate-800/50 rounded-xl p-6 border border-slate-700 shadow-purple-700 bg-purple-700 transition-all hover:shadow-lg hover:shadow-purple-500/10">
+                            <div class="flex items-start gap-4">
+                                <img src="./sources/MUN.png" alt="MUN"
+                                    class="w-16 h-16 object-contain rounded-lg bg-white p-2">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white mb-1">
+                                        <a href="https://www.mun.ca/" target="_blank"
+                                            class="hover:text-purple-700 transition-colors">
+                                            Memorial University
+                                        </a>
+                                    </h3>
+                                    <p class="text-purple-300 font-medium">M.Sc Computer Science</p>
+                                    <p class="text-slate-300 text-sm mt-2">2024 - Present</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-700">
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">Python</span>
+                                    <span
+                                        class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">JavaScript</span>
+                                    <span
+                                        class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">Matplotlib</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AIUB Card -->
+                        <div
+                            class="bg-slate-800/50 rounded-xl p-6 border border-slate-700 shadow-purple-700 bg-purple-700 transition-all hover:shadow-lg hover:shadow-purple-500/10">
+                            <div class="flex items-start gap-4">
+                                <img src="https://www.aiub.edu/Files/Templates/AIUBv3/assets/images/aiub-logo-white-border.svg"
+                                    alt="AIUB" class="w-16 h-16 object-contain rounded-lg bg-white p-2">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white mb-1">
+                                        <a href="https://www.aiub.edu/" target="_blank"
+                                            class="hover:text-purple-700 transition-colors">
+                                            AIUB
+                                        </a>
+                                    </h3>
+                                    <p class="text-purple-300 font-medium">B.Sc Computer Engineering</p>
+                                    <p class="text-slate-300 text-sm mt-2">2020 - 2024 • CGPA: 3.9</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-700">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">C++</span>
+                                    <span
+                                        class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">JavaScript</span>
+                                    <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">SQL</span>
+                                    <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-white">OS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="creativeworks" class="my-24 scroll-mt-24">
+                    <div class="container mx-auto px-1">
+                        <h2 class="text-base tracking-wider mb-8 text-center text-white">CREATIVE WORKS
+                            <hr />
+                        </h2>
+                        <div class="grid md:grid-cols-2 gap-10">
+                            <!-- Project 1 -->
+                            <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                                <img src="./sources/ui.png" alt="Project 1" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
+                                    <p class="text-gray-700 mb-4">
+                                        Focused on product showcase, user-friendly navigation, and vibrant,
+                                        brand-aligned visuals
+                                    </p>
+                                    <div class="flex space-x-4">
+                                        <a href="https://www.linkedin.com/in/tofahossain-moon/recent-activity/all/"
+                                            target="_blank"
+                                            class="shadow-purple-700 bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-linear-to-b from-purple-500 to-purple-600 transition">
+                                            View Projects
+                                        </a>
+                                        <!-- <a href="#" class="border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100 transition">
+                                                GitHub
+                                            </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project 2 -->
+                            <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                                <img src="./sources/posters.png" alt="Project 2" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Graphic Design</h3>
+                                    <p class="text-gray-700 mb-4">
+                                        Dynamic visuals focusing on the event's key message and audience engagement
+                                    </p>
+                                    <div class="flex space-x-4">
+                                        <a href="#"
+                                            class="shadow-purple-700 bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-linear-to-b from-purple-500 to-purple-600 transition">
+                                            View Projects
+                                        </a>
+                                        <!-- <a href="#" class="border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100 transition">
+                                                GitHub
+                                            </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact" class="w-full shadow-purple-700 bg-purple-1000 text-white py-20 font-mono">
+                    <div class="container mx-auto px-5 text-center">
+                        <h2 class="pixel-text text-4xl text-purple-450 uppercase">
+                            Contact Me
+                        </h2>
+
+                        <p class="text-xl mb-10">
+                            <span id="typing-text"></span><span class="blinking-cursor">|</span>
+                        </p>
+                        <div class="flex justify-center space-x-6">
+                            <a href="mailto:tofa.hossainmoon@gmail.com" class="hover:text-blue-200 transition"
+                                target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/moontrovert" class="hover:text-blue-200 transition"
+                                target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/tofahossain-moon/"
+                                class="hover:text-blue-200 transition" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const text = "I'm always open to discussing new projects, opportunities, or collaborations.";
+                        let index = 0;
+                        const typingElement = document.getElementById("typing-text");
+
+                        function typeText() {
+                            if (index < text.length) {
+                                typingElement.textContent += text.charAt(index);
+                                index++;
+                                setTimeout(typeText, 30); // Adjust speed here
+                            }
                         }
+
+                        function restartTyping() {
+                            typingElement.textContent = ""; // Clear text
+                            index = 0; // Reset index
+                            typeText(); // Start typing again
+                        }
+
+                        typeText(); // Start typing initially
+
+                        setInterval(restartTyping, 9000); // Restart every 1 minute (60000ms)
                     });
-                }, { threshold: .8 });
-            
-                // Observe each section
-                sections.forEach(section => {
-                    observer.observe(section);
+                </script>
+
+                <style>
+                    .blinking-cursor {
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        color: white;
+                        animation: blink 0.8s infinite;
+                    }
+
+                    @keyframes blink {
+                        0% {
+                            opacity: 1;
+                        }
+
+                        50% {
+                            opacity: 0;
+                        }
+
+                        100% {
+                            opacity: 1;
+                        }
+                    }
+                </style>
+
+
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
             });
-        </script>
-        
-        <script>
-            let stars = document.getElementById('stars');
-            let moon = document.getElementById('moon');
-            let mountain_behind = document.getElementById('mountain_behind');
-            let text = document.getElementById('text');
-            let btn = document.getElementById('btn');
-            let mountain_front = document.getElementById('mountain_front');
-            let header = document.querySelector('header');
+        });
 
-            window.addEventListener('scroll', function() {
-                let value = window.scrollY;
-                // Remove stars from this animation
-                moon.style.top = value * 1.05 + 'px';
-                mountain_behind.style.top = value * 0.5 + 'px';
-                mountain_front.style.top = value * 0 + 'px';
-                text.style.marginRight = value * 4 + 'px';
-                text.style.marginTop = value * 1.5 + 'px';
-                btn.style.marginTop = value * 1.5 + 'px';
-                header.style.top = value * 0.5 + 'px';
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll("#main-nav a");
+            const sections = document.querySelectorAll("section");
+
+            // Create an intersection observer to detect when sections are in view
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    const navLink = document.querySelector(`a[href="#${entry.target.id}"]`);
+
+                    // If section is in view, add active class to nav item
+                    if (entry.isIntersecting) {
+                        navLink.querySelector(".nav-text").classList.add("active");
+                    } else {
+                        navLink.querySelector(".nav-text").classList.remove("active");
+                    }
+                });
+            }, { threshold: .8 });
+
+            // Observe each section
+            sections.forEach(section => {
+                observer.observe(section);
             });
-        </script>
-        
-    </body>
+        });
+    </script>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountain_behind = document.getElementById('mountain_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountain_front = document.getElementById('mountain_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            // Remove stars from this animation
+            moon.style.top = value * 1.05 + 'px';
+            mountain_behind.style.top = value * 0.5 + 'px';
+            mountain_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        });
+    </script>
+
+</body>
+
 </html>
